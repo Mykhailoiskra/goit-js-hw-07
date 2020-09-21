@@ -17,12 +17,10 @@ const images = [
 ];
 
 function getHtmlString(array) {
-  let string = "";
-  array.forEach(
-    (obj) =>
-      (string += `<li class = "item"><img src="${obj.url}" alt = "${obj.alt}"></li>`)
+  const string = array.map(
+    (obj) => `<li class = "item"><img src="${obj.url}" alt = "${obj.alt}"></li>`
   );
-  return string;
+  return string.join("");
 }
 
 const gallery = document.querySelector("#gallery");

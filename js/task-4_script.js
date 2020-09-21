@@ -1,11 +1,11 @@
 let counterValue = 0;
 
 function increment() {
-  return (counterValue += 1);
+  counterValue += 1;
 }
 
 function decrement() {
-  return (counterValue -= 1);
+  counterValue -= 1;
 }
 
 const incrementBtn = document.querySelector('button[data-action="increment"]');

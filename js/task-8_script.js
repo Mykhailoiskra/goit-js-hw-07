@@ -23,8 +23,9 @@ function createBoxes() {
 
 function destroyBoxes() {
   const removeEl = refs.boxesContainer.querySelectorAll("div");
-
-  refs.boxesContainer.removeChild(...removeEl);
+  for (let i = 0; i < removeEl.length; i += 1) {
+    refs.boxesContainer.removeChild(removeEl[i]);
+  }
 }
 refs.createBtn.addEventListener("click", createBoxes);
 refs.destroyBtn.addEventListener("click", destroyBoxes);
